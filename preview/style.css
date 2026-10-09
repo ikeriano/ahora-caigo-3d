@@ -290,3 +290,16 @@ body.final21 #score{border-color:#c03060}
 #habUI.split .hsTag{display:block;position:absolute;bottom:4vh;padding:5px 14px;border-radius:8px;background:linear-gradient(#1b3aa8,#0b1a55);color:#fff;font-weight:900;font-size:clamp(12px,2.4vh,18px);border:2px solid #ffd34d}
 #habUI .hsTag.l{left:3vw} #habUI .hsTag.r{right:3vw}
 #habUI .hsSkip{position:absolute;right:2vw;top:9vh;color:#fff;background:#0008;padding:4px 10px;border-radius:12px;font-size:clamp(11px,2vh,15px)}
+
+.cuToggle{display:flex;gap:10px;align-items:center;font-size:clamp(13px,2.3vh,17px);margin:6px 0}
+.cuToggle input{width:22px;height:22px}
+#adCard{position:fixed;inset:0;z-index:15;display:flex;align-items:center;justify-content:center;pointer-events:none}
+#adCard .adT{font:900 clamp(40px,11vh,96px)/1 "Arial Black",sans-serif;color:#fff;letter-spacing:.08em;background:linear-gradient(90deg,#ff2d7a,#ffb300,#2bd36a,#2d9bff);padding:14px 40px;border-radius:24px;box-shadow:0 10px 40px #0009;transform:rotate(-4deg);animation:adPop .5s ease-out}
+@keyframes adPop{from{transform:rotate(-4deg) scale(.3);opacity:0}to{transform:rotate(-4deg) scale(1);opacity:1}}
+#adBadge{position:fixed;left:2vw;top:12vh;z-index:14;background:#ffb300;color:#2a1600;font-weight:900;padding:4px 12px;border-radius:8px;letter-spacing:.1em;font-size:clamp(11px,2vh,15px);pointer-events:none}
+#adBadge small{display:block;font-weight:600;letter-spacing:0;font-size:.75em;margin-top:2px}
+#vidasN{display:flex;align-items:center;gap:6px;background:rgba(0,20,10,.55);border:2px solid #2bd36a;border-radius:14px;padding:4px 10px 4px 4px}
+#vidasN i{width:clamp(30px,6vh,46px);height:clamp(30px,6vh,46px);background:url(assets/img/vidas_1.png) center 92%/100% auto no-repeat;display:block}
+#vidasN b{color:#bfffd2;font:900 clamp(18px,4vh,30px)/1 "Arial Black",sans-serif}
+body.final #vidasN{visibility:hidden}
+.cuToggle select{font-size:1em;padding:3px 6px;border-radius:6px}

@@ -52,7 +52,7 @@
 </div>
 
 <div id="hud" class="hidden">
-  <img id="vidas" src="assets/img/vidas_2.png" alt="">
+  <img id="vidas" src="assets/img/vidas_2.png" alt=""><div id="vidasN" class="hidden"><i></i><b>×20</b></div>
   <div id="timer"><span id="timerTxt">30</span></div>
   <div id="score"><span id="scoreLbl">PUNTOS</span> <b id="scoreTxt">0</b><b id="scoreEur"></b></div>
   <div id="roundTxt"></div>
@@ -83,6 +83,10 @@
     <label>Logo de cadena (esquina)</label>
     <div class="cuRow cuLogo"><div id="cuChPrev" class="chPrev"><img id="cuChImg" alt=""><span>HD</span></div><div class="cuBtns"><label class="cuFile">📁 Subir logo de cadena<input id="cuChFile" type="file" accept="image/*"></label><button id="cuChReset">Quitar logo de cadena</button></div></div>
     <div class="cuNote">Los logos se guardan solo en este dispositivo. Sin logo de cadena se muestra solo «HD».</div>
+    <h3 class="cuH">Comodines iniciales</h3>
+    <label class="cuToggle">Comodines del central al empezar: <select id="cuVidas"><option value="2">2 (clásico)</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></label>
+    <h3 class="cuH">Publicidad</h3>
+    <label class="cuToggle"><input id="cuAds" type="checkbox" checked> Pausa publicitaria (productos ficticios) a mitad del Programa completo y de los especiales</label>
   </div>
   <button class="back" id="cuBack">Volver</button>
 </div>
