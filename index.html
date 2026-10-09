@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover,interactive-widget=resizes-content">
+<meta name="theme-color" content="#02040c">
+<title>¡Ahora Caigo! 3D</title>
+<link rel="icon" href="assets/img/footprint.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"></div>
+<div id="loading"><img src="assets/img/footprint.png" alt=""><div>Cargando plató…</div></div>
+
+<div id="menu" class="screen">
+  <img class="logo" src="assets/img/logo_text.webp" alt="¡Ahora Caigo!">
+  <div class="btns">
+    <button data-mode="mini">Minijuego</button>
+    <button data-mode="entreno">Entrenamiento</button>
+    <button data-mode="programa">Programa completo</button>
+    <button data-mode="prime" class="gold">Especial Prime Time</button>
+    <button data-mode="historia">Historia del programa</button>
+  </div>
+  <div class="themes"><span>Temática:</span><div id="themeList"></div></div>
+  <div class="menuFoot">
+    <div class="dl"><a href="https://github.com/ikeriano/ahora-caigo-3d/releases/latest/download/AhoraCaigo3D.apk" target="_blank" rel="noopener">⬇ Descargar APK (3D)</a> <a href="https://github.com/ikeriano/ahora-caigo-3d/releases/latest/download/AhoraCaigo-original.apk" target="_blank" rel="noopener">⬇ Descargar APK (minijuego original)</a></div>
+    <div class="disc">Remake no oficial hecho por un fan, sin ánimo de lucro. ¡Ahora Caigo! es un formato de Antena 3 / Gestmusic. Sin relación oficial con el programa.</div>
+  </div>
+</div>
+
+<div id="trainMenu" class="screen hidden">
+  <h2>Entrenamiento</h2>
+  <div class="btns">
+    <button data-test="duelo">Duelo normal</button>
+    <button data-test="gallina">Palabra gallina</button>
+    <button data-test="monedas">Monedas</button>
+    <button data-test="final">Desafío final</button>
+  </div>
+  <label class="chk"><input type="checkbox" id="unlimited"> Tiempo ilimitado</label>
+  <button class="back" id="trainBack">Volver</button>
+</div>
+
+<div id="hud" class="hidden">
+  <img id="vidas" src="assets/img/vidas_2.png" alt="">
+  <div id="timer"><span id="timerTxt">30</span></div>
+  <div id="score">PUNTOS <b id="scoreTxt">0</b></div>
+  <div id="roundTxt"></div>
+</div>
+<img id="tokens" class="hidden" src="assets/img/tokens_0.png" alt="">
+<div style="display:none">
+</div>
+<div id="glights" class="hidden"></div>
+<div id="topBtns"><button id="btnLights" title="Luces">💡 Luces</button><button id="btnVoice" title="Voz del presentador">🗣</button><button id="btnMute" title="Sonido">🔊</button><button id="btnHome" title="Menú">⌂</button></div>
+<div id="hint" class="hidden"></div>
+
+<div id="qpanel" class="hidden">
+  <div id="qbox"></div>
+  <div id="typed"></div>
+  <div id="qbtns"><button id="btnType">⌨ Escribir</button><button id="btnPasa">PASA</button><button id="btnNext" class="hidden">Siguiente ▶</button></div>
+</div>
+
+<div id="overlay" class="hidden"></div>
+<div id="bubble" class="hidden"></div>
+<div id="joy" class="hidden"><div id="knob"></div></div>
+<div id="video" class="hidden"><video playsinline></video><button id="skipVideo">Saltar ▶▶</button></div>
+<div id="hist" class="hidden"><div id="histHead"><span id="histNum"></span> <b id="histTitle"></b></div><div id="histSub"></div><div id="histBtns"><button id="histPrev">◀ Anterior</button><button id="histNext">Siguiente ▶</button><button id="histSkip">Saltar ✕</button></div></div>
+<input id="kbd" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" inputmode="text" aria-label="Respuesta">
+<script src="media.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
