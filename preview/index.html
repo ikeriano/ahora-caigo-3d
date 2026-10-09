@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover,interactive-widget=resizes-content">
+<meta name="theme-color" content="#02040c">
+<meta name="robots" content="noindex"><title>¡Ahora Caigo! 3D</title>
+<link rel="icon" href="assets/img/footprint.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"></div>
+<div id="loading"><img src="assets/img/footprint.png" alt=""><div>Cargando plató…</div></div>
+
+<div id="menu" class="screen">
+  <img class="logo" id="menuLogo" src="assets/img/logo_text.webp" alt="¡Ahora Caigo!">
+  <div class="btns">
+    <button data-mode="mini">Minijuego</button>
+    <button data-mode="entreno">Entrenamiento</button>
+    <button data-mode="programa">Programa completo</button>
+    <button data-mode="historia">Historia del programa</button>
+    <button id="btnCustom" class="custom">⚙ Personalizar programa</button>
+  </div>
+  <div class="specials"><span>Programas especiales:</span><div class="spBtns">
+    <button data-mode="prime" class="gold">Especial Prime Time</button>
+    <button data-mode="esp10" class="sp10">Especial 10 años</button>
+    <button data-mode="esp1000" class="sp1000">Especial 1000 programas</button>
+  </div></div>
+  <div class="themes"><span>Temática:</span><div id="themeList"></div></div>
+  <div id="jpInfo"></div>
+  <div class="menuFoot">
+    <div class="dl"><a href="https://github.com/ikeriano/ahora-caigo-3d/releases/latest/download/AhoraCaigo3D.apk" target="_blank" rel="noopener">⬇ Descargar APK (3D)</a> <a href="https://github.com/ikeriano/ahora-caigo-3d/releases/latest/download/AhoraCaigo-original.apk" target="_blank" rel="noopener">⬇ Descargar APK (minijuego original)</a></div>
+    <div class="disc">Remake no oficial hecho por un fan, sin ánimo de lucro. ¡Ahora Caigo! es un formato de Antena 3 / Gestmusic. Sin relación oficial con el programa.</div>
+  </div>
+</div>
+
+<div id="trainMenu" class="screen hidden">
+  <h2>Entrenamiento</h2>
+  <div class="btns">
+    <button data-test="duelo">Duelo normal</button>
+    <button data-test="gallina">Palabra gallina</button>
+    <button data-test="monedas">Monedas</button>
+    <button data-test="final">Desafío final</button>
+    <button data-test="dameletra">¡Dame letra!</button>
+    <button data-test="sino">¿Sí o no?</button>
+    <button data-test="entretres">Entre tres</button>
+    <button data-test="adivina">Adivina</button>
+    <button data-test="eleccion" class="wide">Elección del central</button>
+  </div>
+  <label class="chk"><input type="checkbox" id="unlimited"> Tiempo ilimitado</label>
+  <button class="back" id="trainBack">Volver</button>
+</div>
+
+<div id="hud" class="hidden">
+  <img id="vidas" src="assets/img/vidas_2.png" alt="">
+  <div id="timer"><span id="timerTxt">30</span></div>
+  <div id="score"><span id="scoreLbl">PUNTOS</span> <b id="scoreTxt">0</b><b id="scoreEur"></b></div>
+  <div id="roundTxt"></div>
+</div>
+<img id="tokens" class="hidden" src="assets/img/tokens_0.png" alt="">
+<div style="display:none">
+</div>
+<div id="glights" class="hidden"></div>
+<div id="topBtns"><button id="btnLights" title="Luces">💡 Luces</button><button id="btnVoice" title="Voz del presentador">🗣</button><button id="btnMute" title="Sonido">🔊</button><button id="btnHome" title="Menú">⌂</button></div>
+<div id="hint" class="hidden"></div>
+
+<div id="qpanel" class="hidden">
+  <div id="qbox"></div>
+  <div id="typed"></div>
+  <div id="qbtns"><button id="btnType">⌨ Escribir</button><button id="btnPasa">PASA</button><button id="btnNext" class="hidden">Siguiente ▶</button></div>
+</div>
+
+<div id="tpanel" class="hidden"></div>
+<div id="overlay" class="hidden"></div>
+<div id="custom" class="screen hidden">
+  <h2>Personalizar programa</h2>
+  <div class="cuBox">
+    <label>Nombre del programa</label>
+    <div id="cuPresets" class="cuPresets"></div>
+    <div class="cuRow"><input id="cuName" maxlength="40" placeholder="Nombre personalizado…"><button id="cuUse">Usar este nombre</button></div>
+    <label>Logo para «<span id="cuCur"></span>»</label>
+    <div class="cuRow cuLogo"><img id="cuPrev" alt="logo"><div class="cuBtns"><label class="cuFile">📁 Subir logo<input id="cuFile" type="file" accept="image/*"></label><button id="cuReset">Restablecer logo</button></div></div>
+    <label>Logo de cadena (esquina)</label>
+    <div class="cuRow cuLogo"><div id="cuChPrev" class="chPrev"><img id="cuChImg" alt=""><span>HD</span></div><div class="cuBtns"><label class="cuFile">📁 Subir logo de cadena<input id="cuChFile" type="file" accept="image/*"></label><button id="cuChReset">Quitar logo de cadena</button></div></div>
+    <div class="cuNote">Los logos se guardan solo en este dispositivo. Sin logo de cadena se muestra solo «HD».</div>
+  </div>
+  <button class="back" id="cuBack">Volver</button>
+</div>
+<div id="bubble" class="hidden"></div>
+<div id="joy" class="hidden"><div id="knob"></div></div>
+<div id="video" class="hidden"><video playsinline></video><button id="skipVideo">Saltar ▶▶</button></div>
+<div id="cineSkip" class="hidden"><span>Toca para saltar ⏭</span></div>
+<div id="cineTitle"></div>
+<div id="chBug"><img id="chImg" alt=""><span>HD</span></div>
+<div id="fw" class="hidden"><div id="fwTag">#AC10años</div><div id="fwPromo"><img src="assets/img/logo_text.webp" alt=""><div><b>ESPECIAL PRIME TIME</b><span>MAÑANA 22.45</span></div></div>
+<div id="fwCred"><div class="roll"><h3>AGRADECIMIENTOS</h3><p>Gracias por jugar estos diez años con nosotros</p><h4>Presentador virtual</h4><p>Personaje genérico creado para este remake</p><h4>Voz</h4><p>Piper TTS · es_ES-davefx-medium</p><h4>Público</h4><p>Cientos de espectadores low-poly muy aplaudidores</p><h4>Plató y luces</h4><p>Hecho con three.js</p><h4>Preguntas</h4><p>Comunidad de fans</p><h4>Remake no oficial</h4><p>Hecho por un fan, sin ánimo de lucro.<br>¡Ahora Caigo! es un formato de Antena 3 / Gestmusic. Sin relación oficial con el programa.</p><h3>¡HASTA SIEMPRE!</h3></div></div></div>
+<div id="hist" class="hidden"><div id="histHead"><span id="histNum"></span> <b id="histTitle"></b></div><div id="histSub"></div><div id="histBtns"><button id="histPrev">◀ Anterior</button><button id="histNext">Siguiente ▶</button><button id="histSkip">Saltar ✕</button></div></div>
+<input id="kbd" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" inputmode="text" aria-label="Respuesta">
+<script src="media.js"></script>
+<script src="game.js"></script>
+<div id="pvBadge" style="position:fixed;left:50%;bottom:3px;transform:translateX(-50%);z-index:99999;background:#d0102a;color:#fff;font:bold 11px/1.2 sans-serif;padding:3px 10px;border-radius:10px;letter-spacing:.06em;pointer-events:none;box-shadow:0 2px 6px #0008;opacity:.9">VERSIÓN DE PRUEBA</div></body>
+</html>
