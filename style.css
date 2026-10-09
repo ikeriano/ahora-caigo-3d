@@ -128,3 +128,11 @@ body.final #score{position:fixed;right:1.5vw;top:calc(40vh + clamp(60px,12vh,104
 .menuFoot .disc{opacity:.85;text-shadow:0 1px 2px #000}
 .screen{justify-content:safe center}
 @media (max-height:480px){.screen{gap:1vh;padding:1vh}.screen .logo{max-height:17vh}.btns button{padding:.9vh 1vw}.menuFoot{font-size:10px}.menuFoot .dl a{padding:2px 10px}}
+#cineSkip{position:fixed;inset:0;z-index:25;cursor:pointer;background:transparent}
+#cineSkip span{position:absolute;right:16px;bottom:14px;background:#0008;border:1px solid #fff6;color:#fff;border-radius:16px;padding:5px 12px;font-size:clamp(12px,2.4vh,16px)}
+#cineTitle{position:fixed;left:50%;bottom:12vh;transform:translateX(-50%) scale(.8);z-index:24;opacity:0;transition:opacity .8s,transform .8s;pointer-events:none;text-align:center;white-space:nowrap}
+#cineTitle.on{opacity:1;transform:translateX(-50%) scale(1)}
+#cineTitle span,#cineTitle b{display:block;font-weight:900;letter-spacing:.12em;background:linear-gradient(#fff6d0,#ffd34d 45%,#c98a00 55%,#fff0b0);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 8px #000)}
+#cineTitle span{font-size:clamp(18px,5vh,40px)}
+#cineTitle b{font-size:clamp(36px,11vh,96px);-webkit-text-stroke:1px #5a3a00}
+body.cine #topBtns{visibility:hidden}

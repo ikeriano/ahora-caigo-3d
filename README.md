@@ -12,6 +12,7 @@ Remake en 3D (Three.js) del minijuego de Scratch «¡Ahora Caigo!», jugable en 
 - **Entrenamiento** — practica una prueba suelta (duelo, palabra gallina, monedas o juego final) sin eliminación, viendo la respuesta correcta y con tiempo ilimitado opcional.
 - **Programa completo** — camina por el plató hasta tu trampilla y juega el programa entero: presentador virtual, chistes malos, 8 oponentes, monedas, plantarse o **Juego Final** (10 preguntas en 2 minutos).
 - **Especial Prime Time** — versión de gala del programa completo, con luces doradas y un premio final mayor.
+- **Cabecera** — el Programa completo y el Especial Prime Time empiezan con una cabecera cinematográfica hecha con el motor del juego (unos 25 s, se salta tocando la pantalla). Si en el futuro existe `assets/intro.mp4`, primero se reproduce el vídeo y luego la cabecera. Se puede elegir con `?cabecera=ambas`, `?cabecera=video` o `?cabecera=motor`.
 - **Historia del programa** — el presentador virtual repasa la historia del concurso en 12 capítulos mientras la cámara recorre el plató.
 - **Temáticas** — Clásico, Halloween, Niños, Nochebuena, Navidad, Carnaval, Semana Santa, Verano y San Valentín, cada una con su decorado y sus preguntas.
 - **Luces** — botón 💡 con una mesa de luces (cabezas móviles, LineBars, Washes y paneles LED), con colores, estados, CUEs, gobos, movimientos y velocidades.
