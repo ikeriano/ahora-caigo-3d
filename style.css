@@ -311,3 +311,6 @@ body.hudlite #timer,body.hudlite #roundTxt{visibility:hidden}
 #chant{position:fixed;left:0;right:0;bottom:24vh;z-index:15;display:flex;justify-content:center;gap:3vw;pointer-events:none}
 #chant span{font:900 clamp(22px,6vh,52px) system-ui,sans-serif;color:#ffd84a;text-shadow:0 0 12px #ff8a00,0 3px 0 #7a2c00;opacity:0;animation:chantPop .9s ease-out forwards}
 @keyframes chantPop{0%{opacity:0;transform:scale(.4)}40%{opacity:1;transform:scale(1.25)}100%{opacity:1;transform:scale(1)}}
+#qtemaList{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+#qtemaList button{background:#0b1a55;border:1px solid #4a7cff;color:#cfe0ff;border-radius:20px;padding:5px 11px;font-size:clamp(11px,1.6vw,15px)}
+#qtemaList button.on{background:#ffb000;color:#201000;border-color:#fff}

@@ -27,6 +27,7 @@
     <button data-mode="esp1000" class="sp1000">Especial 1000 programas</button>
   </div></div>
   <div class="themes"><span>Temática:</span><div id="themeList"></div></div>
+  <div class="themes"><span>Preguntas:</span><div id="qtemaList" class="qtList"><button data-q="auto">Automático</button><button data-q="general">Cultura general</button><button data-q="tv">Concursos de TV</button><button data-q="mezcla">Mezcla</button></div></div>
   <div id="jpInfo"></div>
   <div class="menuFoot">
     <div class="dl"><a href="https://github.com/ikeriano/ahora-caigo-3d/releases/latest/download/AhoraCaigo3D.apk" target="_blank" rel="noopener">⬇ Descargar APK (3D)</a> <a href="https://github.com/ikeriano/ahora-caigo-3d/releases/latest/download/AhoraCaigo-original.apk" target="_blank" rel="noopener">⬇ Descargar APK (minijuego original)</a></div>
@@ -87,6 +88,9 @@
     <div class="cuRow"><input id="cuPlayer" maxlength="18" placeholder="Jugador"></div>
     <label class="cuToggle">Voz del central: <select id="cuPvoz"><option value="M">Voz genérica masculina</option><option value="F">Voz genérica femenina</option></select></label>
     <div class="cuNote">El público corea tu nombre en la moneda. Voces sintéticas genéricas, sin imitar a nadie.</div>
+    <h3 class="cuH">Tema de preguntas</h3>
+    <label class="cuToggle">Preguntas: <select id="cuQtema"><option value="auto">Automático por programa</option><option value="general">Cultura general</option><option value="tv">Concursos de TV</option><option value="mezcla">Mezcla</option></select></label>
+    <div class="cuNote">Automático: Programa completo y minijuego con cultura general (o la temática elegida), Especial 10 años con preguntas sobre ¡Ahora Caigo! y Especial 1000 programas con preguntas sobre concursos de TV. Las otras opciones fuerzan el tema en todo. La palabra gallina sigue siendo de canciones.</div>
     <h3 class="cuH">Comodines iniciales</h3>
     <label class="cuToggle">Comodines del central al empezar: <select id="cuVidas"><option value="2">2 (clásico)</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></label>
     <h3 class="cuH">Publicidad</h3>
