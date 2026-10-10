@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="app"></div>
-<div id="loading"><img src="assets/img/footprint.png" alt=""><div>Cargando plató…</div></div>
+<div id="loading"><img src="assets/img/footprint_hd.webp" alt=""><div>Cargando plató…</div></div>
 
 <div id="menu" class="screen">
   <img class="logo" id="menuLogo" src="assets/img/logo_text.webp" alt="¡Ahora Caigo!">
@@ -53,12 +53,12 @@
 </div>
 
 <div id="hud" class="hidden">
-  <img id="vidas" src="assets/img/vidas_2.png" alt=""><div id="vidasN" class="hidden"><i></i><b>×20</b></div>
+  <img id="vidas" src="assets/img/vidas_2.webp" alt=""><div id="vidasN" class="hidden"><i></i><b>×20</b></div>
   <div id="timer"><span id="timerTxt">30</span></div>
   <div id="score"><span id="scoreLbl">PUNTOS</span> <b id="scoreTxt">0</b><b id="scoreEur"></b></div>
   <div id="roundTxt"></div>
 </div>
-<img id="tokens" class="hidden" src="assets/img/tokens_0.png" alt="">
+<img id="tokens" class="hidden" src="assets/img/tokens_0.webp" alt="">
 <div style="display:none">
 </div>
 <div id="glights" class="hidden"></div>
@@ -93,6 +93,10 @@
     <div class="cuNote">Automático: Programa completo y minijuego con cultura general (o la temática elegida), Especial 10 años con preguntas sobre ¡Ahora Caigo! y Especial 1000 programas con preguntas sobre concursos de TV. Las otras opciones fuerzan el tema en todo. La palabra gallina sigue siendo de canciones.</div>
     <h3 class="cuH">Comodines iniciales</h3>
     <label class="cuToggle">Comodines del central al empezar: <select id="cuVidas"><option value="2">2 (clásico)</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></label>
+    <h3 class="cuH">Calidad de imagen</h3>
+    <label class="cuToggle">Calidad: <select id="cuCalidad"><option value="auto">Auto (recomendada)</option><option value="media">Media (móviles lentos)</option><option value="alta">Alta</option><option value="ultra">Ultra (4K/5K)</option></select></label>
+    <div class="cuNote" id="cuQinfo"></div>
+    <div class="cuNote">Auto usa la resolución nativa de tu pantalla y baja sola si el juego va a menos de 40 FPS. Ultra renderiza hasta 5120 px (4K/5K) con texturas de 4096 px, bloom, sombras suaves y reflejos. Al cambiarla, el juego se recarga.</div>
     <h3 class="cuH">Publicidad</h3>
     <label class="cuToggle"><input id="cuAds" type="checkbox" checked> Pausa publicitaria (productos ficticios) a mitad del Programa completo y de los especiales</label>
   </div>
@@ -110,5 +114,5 @@
 <input id="kbd" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" inputmode="text" aria-label="Respuesta">
 <script src="media.js"></script>
 <script src="game.js"></script>
-<div id="pvBadge" style="position:fixed;left:50%;bottom:3px;transform:translateX(-50%);z-index:99999;background:#d0102a;color:#fff;font:bold 11px/1.2 sans-serif;padding:3px 10px;border-radius:10px;letter-spacing:.06em;pointer-events:none;box-shadow:0 2px 6px #0008;opacity:.9">VERSIÓN DE PRUEBA</div></body>
+</body>
 </html>
